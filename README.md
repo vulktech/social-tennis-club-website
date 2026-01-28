@@ -1,43 +1,92 @@
-# Astro Starter Kit: Minimal
+# Social Tennis Club
 
-```sh
-pnpm create astro@latest -- --template minimal
-```
+A coming-soon landing page for Social Tennis Club - a platform to help tennis players connect, organize matches, and build local communities.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Features
 
-## 🚀 Project Structure
+- Clean, modern landing page design
+- Tennis-themed animations and styling
+- Mobile-responsive layout
+- Performance-optimized static site
 
-Inside of your Astro project, you'll see the following folders and files:
+## Tech Stack
+
+- **[Astro](https://astro.build)** v5.16+ - Modern static site generator
+- **[Tailwind CSS](https://tailwindcss.com)** v4 - Utility-first CSS framework
+- **TypeScript** - Type-safe development
+- **pnpm** - Fast, disk-efficient package manager
+
+## Project Structure
 
 ```text
 /
-├── public/
+├── public/           - Static assets (favicon, images)
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   ├── pages/       - File-based routing (index.astro)
+│   └── styles/      - Global CSS and Tailwind configuration
+├── AGENTS.md        - Claude Code guidance (for AI development)
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Getting Started
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Prerequisites
 
-Any static assets, like images, can be placed in the `public/` directory.
+- Node.js 18+
+- pnpm (install with: `npm install -g pnpm`)
 
-## 🧞 Commands
+### Installation
 
-All commands are run from the root of the project, from a terminal:
+```sh
+pnpm install
+```
+
+### Development
+
+```sh
+pnpm dev
+```
+
+Opens dev server at `http://localhost:4321`
+
+### Build
+
+```sh
+pnpm build
+```
+
+Builds production site to `./dist/`
+
+### Preview
+
+```sh
+pnpm preview
+```
+
+Preview production build locally
+
+## Available Commands
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+| `pnpm install`            | Install dependencies                             |
+| `pnpm dev`                | Start dev server at `localhost:4321`             |
+| `pnpm build`              | Build production site to `./dist/`               |
+| `pnpm preview`            | Preview production build locally                 |
+| `pnpm astro check`        | Type check the project                           |
+| `pnpm astro -- --help`    | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## Styling
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This project uses Tailwind CSS v4 with custom tennis-themed design tokens:
+
+- Custom color palette (tennis green, court, ball, line colors)
+- Custom animations (bounce-ball, float, pulse-glow, racket-swing)
+- Glass morphism effects
+- Responsive design utilities
+
+See `src/styles/global.css` for the complete styling system.
+
+## License
+
+All rights reserved.
