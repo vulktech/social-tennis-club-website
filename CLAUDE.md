@@ -1,0 +1,1 @@
+C:/Users/akires47/workspace/social-tennis-club-website/AGENTS.md

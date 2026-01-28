@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+html {
+  height: 100dvh;
+}
+
+body {
+  height: 100dvh;
+  overflow: hidden;
+}
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --color-tennis-green: #2d5a27;
+  --color-tennis-court: #4a7c45;
+  --color-tennis-ball: #ccff00;
+  --color-tennis-line: #ffffff;
+}
+
+@keyframes bounce-ball {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(204, 255, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(204, 255, 0, 0.6);
+  }
+}
+
+@keyframes net-sway {
+  0%, 100% {
+    transform: skewX(0deg);
+  }
+  50% {
+    transform: skewX(2deg);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes racket-swing {
+  0%, 100% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+}
+
+.animate-bounce-ball {
+  animation: bounce-ball 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-net-sway {
+  animation: net-sway 4s ease-in-out infinite;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.8s ease-out forwards;
+}
+
+.animate-racket-swing {
+  animation: racket-swing 3s ease-in-out infinite;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* Tennis ball texture */
+.tennis-ball {
+  background: radial-gradient(circle at 30% 30%, #e6ff4d 0%, #ccff00 50%, #99cc00 100%);
+  position: relative;
+}
+
+.tennis-ball::before {
+  content: '';
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  right: 10%;
+  bottom: 15%;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  clip-path: polygon(0 0, 30% 0, 30% 100%, 0 100%);
+}
+
+.tennis-ball::after {
+  content: '';
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  right: 10%;
+  bottom: 15%;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%);
+}
+
+/* Court lines pattern */
+.court-pattern {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,102 @@
+---
+import '../styles/global.css';
+
+const features = [
+  {
+    icon: '🤝',
+    title: 'Find Players',
+    description: 'Connect with nearby players'
+  },
+  {
+    icon: '🎾',
+    title: 'Organize Matches',
+    description: 'Schedule games in seconds'
+  },
+  {
+    icon: '🌱',
+    title: 'Grow Together',
+    description: 'Build your local scene'
+  },
+  {
+    icon: '🎉',
+    title: 'Social Events',
+    description: 'From casual to competitive'
+  }
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Social Tennis Club - Where tennis lovers meet, play, and thrive. No fees, no barriers — just tennis. Coming soon." />
+    <title>Social Tennis Club | Play Together</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-gradient-to-br from-emerald-900 via-green-800 to-teal-900 text-white">
+    <!-- Decorative background elements -->
+    <div class="fixed inset-0 court-pattern pointer-events-none opacity-20"></div>
+
+    <!-- Main content -->
+    <main class="relative z-10 flex flex-col items-center justify-center h-[100dvh] px-6 py-8">
+      <!-- Hero Section -->
+      <div class="text-center max-w-4xl mx-auto">
+        <!-- Logo / Brand -->
+        <div class="mb-4 animate-slide-in">
+          <div class="inline-flex items-center gap-3 glass rounded-full px-5 py-2 mb-4">
+            <div class="w-8 h-8 tennis-ball rounded-full animate-pulse-glow"></div>
+            <span class="text-xl font-bold tracking-tight">Social Tennis Club</span>
+          </div>
+        </div>
+
+        <!-- Main Heading -->
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 animate-slide-in delay-100 opacity-0" style="animation-fill-mode: forwards;">
+          <span class="block text-white/90">Play More.</span>
+          <span class="block bg-gradient-to-r from-lime-300 via-green-300 to-emerald-300 bg-clip-text text-transparent">
+            Together.
+          </span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-base md:text-lg text-white/70 mb-4 max-w-2xl mx-auto animate-slide-in delay-200 opacity-0" style="animation-fill-mode: forwards;">
+          Build your tennis community from the ground up. Find players, organize matches, and grow your local scene — whether you're into casual rallies or competitive play. Free to join, free to play.
+        </p>
+
+        <!-- Coming Soon Badge -->
+        <div class="animate-slide-in delay-300 opacity-0" style="animation-fill-mode: forwards;">
+          <div class="inline-flex items-center gap-2 bg-lime-400/20 border border-lime-400/30 rounded-full px-4 py-1.5 mb-4">
+            <span class="relative flex h-3 w-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-lime-400"></span>
+            </span>
+            <span class="text-lime-300 font-semibold tracking-wide uppercase text-sm">Coming Soon</span>
+          </div>
+        </div>
+
+        <!-- Features Preview -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-3xl mx-auto animate-slide-in delay-500 opacity-0" style="animation-fill-mode: forwards;">
+          {features.map((feature, index) => (
+            <div class="glass rounded-xl p-3 hover:bg-white/15 transition-all duration-300 group cursor-default">
+              <div class="text-2xl mb-1 group-hover:scale-110 transition-transform duration-300">
+                {feature.icon}
+              </div>
+              <h3 class="font-semibold text-white/90 text-sm mb-1">{feature.title}</h3>
+              <p class="text-xs text-white/50">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="absolute bottom-4 left-0 right-0 text-center">
+        <p class="text-white/40 text-sm">
+          © 2026 Social Tennis Club. All rights reserved.
+        </p>
+      </div>
+    </main>
+
+  </body>
+</html>
